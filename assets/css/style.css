@@ -1,0 +1,14 @@
+.pageHeader {
+    background-image: url("../images/banner.png");
+    background-repeat: no-repeat;
+    height: 200px;
+    background-size: 900px 200px;
+    background-position: center;
+}
+
+#trainHeader {
+    text-align: center;
+    color: white;
+    font-size: 120px;
+    font-family: 'Cabin Sketch', cursive;
+}
