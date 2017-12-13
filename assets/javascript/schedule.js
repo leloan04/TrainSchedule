@@ -59,14 +59,11 @@ database.ref().on("child_added", function(snapshot){
     + "</td><td>" 
     + moment(nextTrain). format("hh:mm a") 
     + "</td><td>" + minutesAway 
-    + "</td><td><button class='btn btn-default removeTrain'>Remove</button></td><tr>");
-
-    $("#removeTrain").attr("data-key", trainKey);
+    + "</td><td><button class='btn btn-default removeTrain'>Remove</button></td><tr>")
 })
 //Time functionality for the trains
 
-$("#trainTable").on("click", ".removeTrain", function() {
-    var aKey = $(this).attr("data-key");
-    database.ref().child(aKey).remove();
-    $(this).parent().parent().remove();
+$(".removeTrain").on("click", function() {
+    var removeButton = $(this).attr("data-key");
+    $(".removeTrain" + removeButton).remove();
 })
